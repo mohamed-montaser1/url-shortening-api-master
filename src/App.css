@@ -45,6 +45,58 @@ html {
   }
 }
 
-.x {
-  color:  #35323e;
+@media (max-width: 991px) {
+  .nav-collapse {
+    @apply fixed left-0 right-0 overflow-hidden transition-all ease-in-out duration-300 top-20 h-0 p-0 flex-col bg-[#3b3054] z-[1000] rounded-xl container-m;
+  }
+  .nav-collapse.active {
+    @apply h-[50vh] py-5;
+  }
+  .nav-collapse nav {
+    @apply w-full;
+  }
+  .nav-collapse ul {
+    @apply flex-col relative;
+  }
+  .nav-collapse ul::after {
+    content: "";
+    @apply absolute -bottom-5 left-10 right-10 bg-[#9e9aa7] h-[2px];
+  }
+  .nav-collapse ul li {
+    @apply text-center relative;
+  }
+  .nav-collapse ul li a {
+    @apply text-white;
+  }
+  .nav-collapse .auth__buttons {
+    @apply flex-col;
+  }
+
+  .nav-collapse .auth__buttons button.btn--transparent-bg {
+    @apply text-white;
+  }
+}
+
+.container-p {
+  @apply px-28;
+}
+
+.container-m {
+  @apply mx-28;
+}
+
+.container-inline {
+  @apply right-28 left-28;
+}
+
+@media (max-width: 736px) {
+  .container-inline {
+    @apply right-14 left-14;
+  }
+  .container-p {
+    @apply px-14;
+  }
+  .container-m {
+    @apply mx-14;
+  }
 }

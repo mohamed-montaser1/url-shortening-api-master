@@ -37,17 +37,19 @@ export default function Statistics() {
         Track how your links are performing across the web with our advanced
         statistics dashboard.
       </p>
-      <div className="px-28 mt-16 pb-3 flex gap-10 relative">
-        <div className="absolute top-1/2 -translate-y-1/2 h-3 bg-[#2acfcf] left-28 right-28"></div>
-        {data.map(({ icon, title, description, className }) => (
-          <StatisticsCard
-            icon={icon}
-            title={title}
-            description={description}
-            className={className}
-            key={Math.random() * 10000 + 5 / 2 - 3}
-          />
-        ))}
+      <div className="container-p mt-16 pb-3">
+        <div className="mx-auto flex gap-10 relative w-fit max-w-full">
+          <div className="absolute top-1/2 -translate-y-1/2 h-3 bg-[#2acfcf] container-inline max-w-full"></div>
+          {data.map(({ icon, title, description, className }) => (
+            <StatisticsCard
+              icon={icon}
+              title={title}
+              description={description}
+              className={className}
+              key={Math.random() * 10000 + 5 / 2 - 3}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

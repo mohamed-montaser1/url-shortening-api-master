@@ -22,7 +22,7 @@ const data = [
 
 export default function Footer() {
   return (
-    <footer className="px-28 bg-[#232127] min-h-[240px] py-16 flex items-start justify-between">
+    <footer className="container-p bg-[#232127] min-h-[240px] py-16 flex items-start justify-between">
       <img src={Logo} alt="logo" />
 
       <div className="cols flex gap-20">

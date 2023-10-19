@@ -3,7 +3,7 @@ import bgShortenDesktop from "../images/bg-shorten-desktop.svg";
 export default function ShortenLink() {
   return (
     <>
-      <div className="mx-28 min-h-[143px] bg-[#3b3054] -translate-y-[71.5px] rounded-lg relative overflow-hidden z-50">
+      <div className="container-m min-h-[143px] bg-[#3b3054] -translate-y-[71.5px] rounded-lg relative overflow-hidden z-50">
         <img
           src={bgShortenDesktop}
           alt="shorten desktop background"
@@ -18,7 +18,7 @@ export default function ShortenLink() {
           <button className="btn--cyan rounded-md h-14">Shorten It!</button>
         </div>
       </div>
-      <div className="results-list mx-28 flex flex-col gap-3 -translate-y-[34px]">
+      <div className="results-list container-m flex flex-col gap-3 -translate-y-[34px]">
         {Array.from({ length: 3 }).map((el) => (
           <div className="shorten-result" key={Math.random() * 1000 + 5}>
             <span>https://www.frontendmentor.io</span>
