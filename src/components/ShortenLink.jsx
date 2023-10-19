@@ -7,9 +7,9 @@ export default function ShortenLink() {
         <img
           src={bgShortenDesktop}
           alt="shorten desktop background"
-          className="w-full"
+          className="absolute inset-0 w-full h-full"
         />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex w-full px-24 gap-5">
+        <div className="absolute h-full min-[885px]:items-center max-[884px]:flex-col max-[884px]:py-4 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex w-full px-24 max-[598px]:px-11 max-[436px]:px-6 gap-5 shorten__link__container">
           <input
             type="text"
             className="flex-1 rounded-lg px-4 outline-none h-14"
@@ -20,7 +20,10 @@ export default function ShortenLink() {
       </div>
       <div className="results-list container-m flex flex-col gap-3 -translate-y-[34px]">
         {Array.from({ length: 3 }).map((el) => (
-          <div className="shorten-result" key={Math.random() * 1000 + 5}>
+          <div
+            className="shorten-result"
+            key={Math.random() * 1000 + 5}
+          >
             <span>https://www.frontendmentor.io</span>
             <div className="result flex items-center gap-5">
               <a

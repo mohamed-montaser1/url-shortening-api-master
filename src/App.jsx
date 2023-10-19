@@ -11,8 +11,8 @@ function App() {
       <Navbar />
       <Hero />
       <Statistics />
-      <Boost />
-      <Footer />
+      {/* <Boost /> */}
+      {/* <Footer /> */}
     </>
   );
 }

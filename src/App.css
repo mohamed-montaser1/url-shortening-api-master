@@ -29,7 +29,19 @@ html {
     @apply text-[#9e9aa7] font-bold hover:text-[#232127] ease-in-out transition-colors;
   }
   .shorten-result {
-    @apply bg-white w-full min-h-[60px] mx-auto rounded-lg flex justify-between items-center px-7;
+    @apply bg-white w-full min-h-[60px] mx-auto rounded-lg flex justify-between items-center px-7 max-[848px]:flex-col max-[848px]:p-4 max-[848px]:px-2;
+  }
+  .shorten-result .result {
+    @apply max-[848px]:flex-col;
+  }
+  .shorten-result span {
+    @apply max-[848px]:border-b max-[848px]:border-b-[#9e9aa7] max-[848px]:pb-2 max-[848px]:w-full max-[848px]:text-center;
+  }
+  .shorten-result div a {
+    @apply pt-2;
+  }
+  .shorten-result .result button {
+    @apply w-full;
   }
   .footer__col {
     @apply flex flex-col gap-5;
@@ -47,7 +59,7 @@ html {
 
 @media (max-width: 991px) {
   .nav-collapse {
-    @apply fixed left-0 right-0 overflow-hidden transition-all ease-in-out duration-300 top-20 h-0 p-0 flex-col bg-[#3b3054] z-[1000] rounded-xl container-m;
+    @apply absolute left-0 right-0 overflow-hidden transition-all ease-in-out duration-300 top-20 h-0 p-0 flex-col bg-[#3b3054] z-[1000] rounded-xl container-m;
   }
   .nav-collapse.active {
     @apply h-[50vh] py-5;
@@ -75,6 +87,34 @@ html {
   .nav-collapse .auth__buttons button.btn--transparent-bg {
     @apply text-white;
   }
+
+  .hero {
+    @apply flex-col-reverse px-0;
+  }
+  .hero img {
+    @apply relative;
+  }
+  .hero h1 {
+    @apply text-center mx-auto;
+  }
+  .hero p {
+    @apply text-center mx-auto;
+  }
+  .hero button {
+    @apply mx-auto block;
+  }
+}
+
+@media (max-width: 718px) {
+  .hero__illustration {
+    right: -5rem;
+  }
+}
+
+@media (max-width: 378px) {
+  .hero__illustration {
+    right: -3rem;
+  }
 }
 
 .container-p {
@@ -89,6 +129,18 @@ html {
   @apply right-28 left-28;
 }
 
+@media (max-width: 1084px) {
+  .container-inline {
+    @apply right-14 left-14;
+  }
+  .container-p {
+    @apply px-14;
+  }
+  .container-m {
+    @apply mx-14;
+  }
+}
+
 @media (max-width: 736px) {
   .container-inline {
     @apply right-14 left-14;
@@ -98,5 +150,23 @@ html {
   }
   .container-m {
     @apply mx-14;
+  }
+}
+
+@media (max-width: 458px) {
+  .container-inline {
+    @apply right-6 left-6;
+  }
+  .container-p {
+    @apply px-6;
+  }
+  .container-m {
+    @apply mx-6;
+  }
+}
+
+@media (max-width: 884px) {
+  .shorten__link__container button {
+    @apply h-fit;
   }
 }
