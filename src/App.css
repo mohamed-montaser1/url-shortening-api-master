@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+html {
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@layer components {
+  .btn--cyan {
+    @apply bg-[#2acfcf] hover:bg-[#2acfcfa9] py-2 px-5 transition-colors ease-in-out rounded-full text-white font-semibold;
+  }
+  .btn--transparent-bg {
+    @apply hover:text-[#9e9aa7] ease-in-out transition-colors font-semibold text-[#232127];
+  }
+  .navbar__list__element {
+    @apply text-[#9e9aa7] font-bold hover:text-[#232127] ease-in-out transition-colors;
+  }
+  .shorten-result {
+    @apply bg-white w-full min-h-[60px] mx-auto rounded-lg flex justify-between items-center px-7;
+  }
+  .footer__col {
+    @apply flex flex-col gap-5;
+  }
+  .footer__col__header {
+    @apply text-white;
+  }
+  .footer__col__list {
+    @apply flex flex-col gap-2;
+  }
+  .footer__col__link a {
+    @apply text-[#bfbfbf] hover:text-[#2acfcf] transition-colors ease-in-out duration-300;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.x {
+  color:  #35323e;
 }
