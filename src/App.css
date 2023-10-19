@@ -47,10 +47,13 @@ html {
     @apply flex flex-col gap-5;
   }
   .footer__col__header {
-    @apply text-white;
+    @apply text-white max-[924px]:text-center;
   }
   .footer__col__list {
     @apply flex flex-col gap-2;
+  }
+  .footer__col__link {
+    @apply max-[924px]:text-center;
   }
   .footer__col__link a {
     @apply text-[#bfbfbf] hover:text-[#2acfcf] transition-colors ease-in-out duration-300;

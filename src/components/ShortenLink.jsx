@@ -1,11 +1,20 @@
+import React, { useEffect, useState } from "react";
 import bgShortenDesktop from "../images/bg-shorten-desktop.svg";
+import bgShortenMobile from "../images/bg-shorten-mobile.svg";
 
 export default function ShortenLink() {
+  const [windowSize, setWindowSize] = useState(window.screen.availWidth);
+
+  useEffect(() => {
+    window.onresize = (e) => {
+      setWindowSize(e.currentTarget.screen.availWidth);
+    };
+  });
   return (
     <>
       <div className="container-m min-h-[143px] bg-[#3b3054] -translate-y-[71.5px] rounded-lg relative overflow-hidden z-50">
         <img
-          src={bgShortenDesktop}
+          src={windowSize > 652 ? bgShortenDesktop : bgShortenMobile}
           alt="shorten desktop background"
           className="absolute inset-0 w-full h-full"
         />
@@ -20,10 +29,7 @@ export default function ShortenLink() {
       </div>
       <div className="results-list container-m flex flex-col gap-3 -translate-y-[34px]">
         {Array.from({ length: 3 }).map((el) => (
-          <div
-            className="shorten-result"
-            key={Math.random() * 1000 + 5}
-          >
+          <div className="shorten-result" key={Math.random() * 1000 + 5}>
             <span>https://www.frontendmentor.io</span>
             <div className="result flex items-center gap-5">
               <a

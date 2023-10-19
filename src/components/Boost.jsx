@@ -11,12 +11,11 @@ export default function Boost() {
     };
   });
   return (
-    <div className="bg-[#3b3054] relative min-h-[200px]">
+    <div className="bg-[#3b3054] relative min-h-[300px]">
       <img
         src={windowSize > 652 ? BgBoostDesktop : BgBoostMobile}
         className="w-full h-full inset-0 absolute"
         alt="bg boost desktop"
-        srcSet="../images/bg-boost-mobile.svg 200vw"
       />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full container-p">
         <h2 className="text-center text-white text-4xl font-semibold w-full">
