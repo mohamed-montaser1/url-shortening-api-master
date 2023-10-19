@@ -22,10 +22,10 @@ const data = [
 
 export default function Footer() {
   return (
-    <footer className="container-p bg-[#232127] min-h-[240px] py-16 flex items-start justify-between">
+    <footer className="container-p bg-[#232127] min-h-[240px] py-16 flex items-start justify-between max-[924px]:flex-col max-[924px]:items-center">
       <img src={Logo} alt="logo" />
 
-      <div className="cols flex gap-20">
+      <div className="cols flex gap-20 max-[924px]:flex-col my-11">
         {data.map(({ header, list }) => (
           <FooterColumn header={header} list={list} />
         ))}

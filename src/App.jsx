@@ -12,7 +12,7 @@ function App() {
       <Hero />
       <Statistics />
       <Boost />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
